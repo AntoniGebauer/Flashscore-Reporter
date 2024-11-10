@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C925B6C42CE0A44900FFC010 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C925B6C32CE0A44900FFC010 /* LoginView.swift */; };
 		C9B49CC92CC56DEE0060B763 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B49CC62CC56DEE0060B763 /* ContentView.swift */; };
 		C9B49CCA2CC56DEE0060B763 /* Flashscore_ReporterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B49CC72CC56DEE0060B763 /* Flashscore_ReporterApp.swift */; };
 		C9B49CCB2CC56DEE0060B763 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B49CC32CC56DEE0060B763 /* Preview Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C925B6C32CE0A44900FFC010 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C9B49CB22CC56DE80060B763 /* Flashscore Reporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flashscore Reporter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B49CC32CC56DEE0060B763 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9B49CC52CC56DEE0060B763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				C9B49CC42CC56DEE0060B763 /* Preview Content */,
 				C9B49CC52CC56DEE0060B763 /* Assets.xcassets */,
 				C9B49CC62CC56DEE0060B763 /* ContentView.swift */,
+				C925B6C32CE0A44900FFC010 /* LoginView.swift */,
 				C9B49CC72CC56DEE0060B763 /* Flashscore_ReporterApp.swift */,
 			);
 			path = "Flashscore Reporter";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C925B6C42CE0A44900FFC010 /* LoginView.swift in Sources */,
 				C9B49CC92CC56DEE0060B763 /* ContentView.swift in Sources */,
 				C9B49CCA2CC56DEE0060B763 /* Flashscore_ReporterApp.swift in Sources */,
 			);
