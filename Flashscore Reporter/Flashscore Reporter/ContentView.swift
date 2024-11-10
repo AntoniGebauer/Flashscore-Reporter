@@ -7,48 +7,41 @@
 
 import SwiftUI
 
+enum Tabs: String, Equatable, Hashable {
+    case home = "home"
+    case soccer = "soccer"
+    case hockey = "hockey"
+    case settings = "settings"
+}
+
 struct ContentView: View {
-    @State private var username = ""
-    @State private var password = ""
+    
+    init() {
+        UITabBar.appearance().tintColor = .white
+        UITabBar.appearance().unselectedItemTintColor = .white.withAlphaComponent(0.6)
+        UITabBar.appearance().backgroundColor = .tabBarBackround
+                                   
+    }
+    
+    @State var selectedTab: Tabs = .home
     
     var body: some View {
-        ZStack {
-            LinearGradient(colors: [.green, .blue], startPoint: .topLeading, endPoint: .bottomTrailing)
-                .ignoresSafeArea()
-            
-            VStack(spacing: 20) {
-                Text("Logowanie")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .padding(.bottom, 30)
-                
-                TextField("Nazwa Użytkownika", text: $username)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal)
-                
-                if !username.isEmpty {
-                    SecureField("Hasło", text: $password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.horizontal)
-                }
-               
-                
-                Button(action: {
-                    // Add your login logic here
-                }) {
-                    Text("Zaloguj")
-                        .foregroundColor(.white)
-                        .frame(width: 200, height: 50)
-                        .cornerRadius(10)
-                }
-                .tint(.black.opacity(0.6))
-                .buttonStyle(.borderedProminent)
-                .disabled(username.isEmpty || password.isEmpty)
-                .padding(.top)
+        TabView(selection: $selectedTab) {
+            Tab("Start", systemImage: "house", value: .home) {
+                HomeView()
             }
-            .animation(.easeInOut(duration: 0.4), value: username)
-            .padding()
+            
+            Tab("Piłka Nożna", systemImage: "figure.indoor.soccer", value: .soccer) {
+                HomeView()
+            }
+            
+            Tab("Hokej", systemImage: "figure.hockey", value: .hockey) {
+                HomeView()
+            }
+            
+            Tab("Ustawienia", systemImage: "gearshape", value: .settings) {
+                HomeView()
+            }
         }
     }
 }
